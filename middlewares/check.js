@@ -4,8 +4,10 @@ module.exports = {
         if(!req.session.user){
             req.session.error = "请先登陆"
             res.redirect('/login')
+        }else{
+            next()
         }
-        next()
+       
     },
     checkNotLogin:(req,res,next)=>{
         if(req.session.user){

@@ -3,7 +3,7 @@ var multer = require('multer')
 var storage = multer.diskStorage({
     //设置上传文件的路径
     destination:(req,file,cb)=>{
-        cb(null,'../public/images')
+        cb(null,'/public/images')
     },
     //设置上传文件的名字
     filename:(req,file,cb)=>{
